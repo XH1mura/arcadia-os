@@ -1,0 +1,20 @@
+[package]
+name = "arcadia-kernel"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+spin = "0.9"
+linked_list_allocator = "0.10"
+x86_64 = "0.15"
+uart_16550 = "0.2"
+pic8259 = "0.10"
+pc-keyboard = "0.7"
+
+[dependencies.lazy_static]
+version = "1.5"
+features = ["spin_no_std"]
+
+[lib]
+crate-type = ["staticlib"]

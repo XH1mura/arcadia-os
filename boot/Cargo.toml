@@ -1,0 +1,14 @@
+[package]
+name = "arcadia-boot"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+uefi = { version = "0.28", features = ["alloc"] }
+uefi-services = "0.25"
+log = "0.4"
+xmas-elf = "0.9"
+
+[lib]
+crate-type = ["staticlib"]

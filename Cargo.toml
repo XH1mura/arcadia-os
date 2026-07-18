@@ -1,0 +1,26 @@
+[workspace]
+members = [
+    "kernel",
+    "boot",
+    "flux",
+    "editor",
+    "libs/shared",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Arcadia Developers"]
+license = "MIT"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.dev]
+opt-level = 0
+split-debuginfo = "packed"
